@@ -1,0 +1,98 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border-color: #333;
+  }
+  
+  body.dark-mode .card-header {
+    filter: brightness(0.85);
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+  }
+  
+  body.dark-mode .dropdown-menu {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  body.dark-mode .dropdown-item {
+    color: #fff;
+  }
+  
+  body.dark-mode .dropdown-item:hover {
+    background-color: #444;
+  }
+  
+  body.dark-mode footer {
+    background-color: #000;
+    color: #ccc;
+  }
+  
+  body.dark-mode hr {
+    border-color: #666;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+  }
+  
+  .dark-mode .navbar .nav-link,
+  .dark-mode .navbar-brand {
+    color: #ffffff !important;
+  }
+  
+  .dark-mode .navbar .nav-link:hover {
+    color: #ffd700 !important;
+  }
+
+  #toggleDarkMode {
+    color: #333;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+  }
+  
+  #toggleDarkMode:hover {
+    background-color: #eaeaea;
+  }
+  
+  .dark-mode #toggleDarkMode {
+    color: #fff;
+    background-color: #333;
+    border-color: #555;
+  }
+  
+  .dark-mode #toggleDarkMode:hover {
+    background-color: #444;
+    color: #ffd700;
+  }
+
+  /* Navbar base */
+.custom-navbar {
+  background-color: #f8f9fa; /* claro */
+  transition: background-color 0.3s ease;
+}
+
+/* Icono hamburguesa visible */
+.custom-navbar .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode navbar */
+body.dark-mode .custom-navbar {
+  background-color: #222;
+}
+
+body.dark-mode .navbar-toggler-icon {
+  filter: brightness(200%);
+}
+
+  

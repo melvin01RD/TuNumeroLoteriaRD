@@ -1,232 +1,202 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Número Lotería RD</title>
-    
-    <!-- graficos para -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Número Lotería RD</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <!-- Logo/Marca -->
-            <span class="navbar-brand brand-custom">TuNumeroLoteriaRD</span>
-            
-            <!-- Botón para móvil -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <span class="navbar-brand brand-custom">TuNumeroLoteriaRD</span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Loterías</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="nacional.html">Lotería Nacional</a></li>
+              <li><a class="dropdown-item" href="leidsa.html">Leidsa</a></li>
+              <li><a class="dropdown-item" href="loteka.html">Loteka</a></li>
+              <li><a class="dropdown-item" href="real.html">Lotería Real</a></li>
+              <li><a class="dropdown-item" href="suerte.html">La Suerte</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Estadísticas</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="estadisticas-nacional.html">Nacional</a></li>
+              <li><a class="dropdown-item" href="estadisticas-leidsa.html">Leidsa</a></li>
+              <li><a class="dropdown-item" href="estadisticas-loteka.html">Loteka</a></li>
+              <li><a class="dropdown-item" href="estadisticas-real.html">Real</a></li>
+              <li><a class="dropdown-item" href="estadisticas-suerte.html">La Suerte</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Redes</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="https://facebook.com/tunumeroloteriard" target="_blank">Facebook</a></li>
+              <li><a class="dropdown-item" href="https://instagram.com/tunumeroloteriard" target="_blank">Instagram</a></li>
+              <li><a class="dropdown-item" href="https://twitter.com/tunumeroloteriard" target="_blank">Twitter</a></li>
+            </ul>
+          </li>
+          <!-- Toggle Dark Mode -->
+          <li class="nav-item d-flex align-items-center">
+            <button id="toggleDarkMode" class="btn btn-outline-dark ms-3" title="Modo Oscuro">
+              <i class="fas fa-moon"></i>
             </button>
-    
-            <!-- Elementos del navbar -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <!-- Dropdown Loterías -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-link-custom" href="#" role="button" data-bs-toggle="dropdown">
-                            Loterías
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="nacional.html">Lotería Nacional</a></li>
-                            <li><a class="dropdown-item" href="leidsa.html">Leidsa</a></li>
-                            <li><a class="dropdown-item" href="loteka.html">Loteka</a></li>
-                            <li><a class="dropdown-item" href="real.html">Lotería Real</a></li>
-                            <li><a class="dropdown-item" href="suerte.html">La Suerte</a></li>
-                        </ul>
-                    </li>
-    
-                    <!-- Dropdown Estadísticas -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-link-custom" href="#" role="button" data-bs-toggle="dropdown">
-                            Estadísticas
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="estadisticas-nacional.html">Nacional</a></li>
-                            <li><a class="dropdown-item" href="estadisticas-leidsa.html">Leidsa</a></li>
-                            <li><a class="dropdown-item" href="estadisticas-loteka.html">Loteka</a></li>
-                            <li><a class="dropdown-item" href="estadisticas-real.html">Real</a></li>
-                            <li><a class="dropdown-item" href="estadisticas-suerte.html">La Suerte</a></li>
-                        </ul>
-                    </li>
-    
-                    <!-- Redes Sociales -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-link-custom" href="#" role="button" data-bs-toggle="dropdown">
-                            Redes
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://facebook.com/tunumeroloteriard" target="_blank">Facebook</a></li>
-                            <li><a class="dropdown-item" href="https://instagram.com/tunumeroloteriard" target="_blank">Instagram</a></li>
-                            <li><a class="dropdown-item" href="https://twitter.com/tunumeroloteriard" target="_blank">Twitter</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Contenido principal -->
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Card 1: Lotería Nacional -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="card-title mb-0">Lotería Nacional</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text"><strong>Fecha:</strong> 25/10/2023</p>
-                        <p class="card-text"><strong>Números Ganadores:</strong></p>
-                        <ul class="list-unstyled">
-                            <li>Primer Premio: </li>
-                            <li>Segundo Premio:</li>
-                            <li>Tercer Premio: </li>
-                        </ul>
-                        <a href="/nacional" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Card 2: Leidsa -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-success text-white">
-                        <h5 class="card-title mb-0">Leidsa</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text"><strong>Fecha:</strong> 25/10/2023</p>
-                        <p class="card-text"><strong>Números Ganadores:</strong></p>
-                        <ul class="list-unstyled">
-                            <li>Primer Premio:</li>
-                            <li>Segundo Premio:</li>
-                            <li>Tercer Premio: </li>
-                        </ul>
-                        <a href="/leidsa" class="btn btn-success">Ver más</a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Card 3: Loteka -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-danger text-white">
-                        <h5 class="card-title mb-0">Loteka</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text"><strong>Fecha:</strong> 25/10/2023</p>
-                        <p class="card-text"><strong>Números Ganadores:</strong></p>
-                        <ul class="list-unstyled">
-                            <li>Primer Premio:</li>
-                            <li>Segundo Premio:</li>
-                            <li>Tercer Premio:</li>
-                        </ul>
-                        <a href="/loteka" class="btn btn-danger">Ver más</a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Card 4: Lotería Real -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-warning text-white">
-                        <h5 class="card-title mb-0">Lotería Real</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text"><strong>Fecha:</strong> 25/10/2023</p>
-                        <p class="card-text"><strong>Números Ganadores:</strong></p>
-                        <ul class="list-unstyled">
-                            <li>Primer Premio:</li>
-                            <li>Segundo Premio:</li>
-                            <li>Tercer Premio:</li>
-                        </ul>
-                        <a href="/real" class="btn btn-warning">Ver más</a>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Card 5: La Suerte -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow-sm">
-                    <div class="card-header bg-info text-white">
-                        <h5 class="card-title mb-0">La Suerte</h5>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text"><strong>Fecha:</strong> 25/10/2023</p>
-                        <p class="card-text"><strong>Números Ganadores:</strong></p>
-                        <ul class="list-unstyled">
-                            <li>Primer Premio:</li>
-                            <li>Segundo Premio:</li>
-                            <li>Tercer Premio:</li>
-                        </ul>
-                        <a href="/suerte" class="btn btn-info">Ver más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Footer -->
-    <footer class="bg-black text-white pt-4 pb-2">
-        <div class="container">
-            <div class="row">
-                <!-- Sección de enlaces -->
-                <div class="col-md-4 text-center text-md-start mb-3">
-                    <h5 class="text-uppercase mb-3" style="color: #ffd700;">Enlaces rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <a href="/contacto" class="text-white text-decoration-none hover-gold">Contacto</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="/nosotros" class="text-white text-decoration-none hover-gold">Nosotros</a>
-                        </li>
-                        <li>
-                            <a href="/privacidad" class="text-white text-decoration-none hover-gold">Política de Privacidad</a>
-                        </li>
-                    </ul>
-                </div>
-    
-                <!-- Sección de redes sociales -->
-                <div class="col-md-4 text-center mb-3">
-                    <h5 class="text-uppercase mb-3" style="color: #ffd700;">Síguenos</h5>
-                    <div class="social-icons">
-                        <a href="https://facebook.com/tunumeroloteriard" 
-                           target="_blank" 
-                           class="text-white mx-2 fs-4 hover-gold">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://twitter.com/tunumeroloteriard" 
-                           target="_blank" 
-                           class="text-white mx-2 fs-4 hover-gold">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://instagram.com/tunumeroloteriard" 
-                           target="_blank" 
-                           class="text-white mx-2 fs-4 hover-gold">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-    
-                <!-- Derechos reservados -->
-                <div class="col-12 text-center mt-4">
-                    <hr class="mb-3" style="border-color: #444;">
-                    <p class="mb-0 small">
-                        © 2025 TuNumeroLoteriaRD. Todos los derechos reservados.
-                    </p>
-                </div>
-            </div>
+  <!-- Contenido principal -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Card 1: Lotería Nacional -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">Lotería Nacional</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Números Ganadores:</strong></p>
+            <ul class="list-unstyled">
+              <li>Primer Premio:</li>
+              <li>Segundo Premio:</li>
+              <li>Tercer Premio:</li>
+            </ul>
+            <a href="/nacional" class="btn btn-primary">Ver más</a>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <!-- Bootstrap JS y Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+      <!-- Card 2: Leidsa -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-success text-white">
+            <h5 class="card-title mb-0">Leidsa</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Números Ganadores:</strong></p>
+            <ul class="list-unstyled">
+              <li>Primer Premio:</li>
+              <li>Segundo Premio:</li>
+              <li>Tercer Premio:</li>
+            </ul>
+            <a href="/leidsa" class="btn btn-success">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Loteka -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-danger text-white">
+            <h5 class="card-title mb-0">Loteka</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Números Ganadores:</strong></p>
+            <ul class="list-unstyled">
+              <li>Primer Premio:</li>
+              <li>Segundo Premio:</li>
+              <li>Tercer Premio:</li>
+            </ul>
+            <a href="/loteka" class="btn btn-danger">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Lotería Real -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-warning text-white">
+            <h5 class="card-title mb-0">Lotería Real</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Números Ganadores:</strong></p>
+            <ul class="list-unstyled">
+              <li>Primer Premio:</li>
+              <li>Segundo Premio:</li>
+              <li>Tercer Premio:</li>
+            </ul>
+            <a href="/real" class="btn btn-warning">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: La Suerte -->
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-info text-white">
+            <h5 class="card-title mb-0">La Suerte</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Números Ganadores:</strong></p>
+            <ul class="list-unstyled">
+              <li>Primer Premio:</li>
+              <li>Segundo Premio:</li>
+              <li>Tercer Premio:</li>
+            </ul>
+            <a href="/suerte" class="btn btn-info">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white pt-4 pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center text-md-start mb-3">
+          <h5 class="text-uppercase mb-3 text-warning">Enlaces rápidos</h5>
+          <ul class="list-unstyled">
+            <a href="/pages/contacto.html">Contacto</a>
+            <a href="/pages/nosotros.html">Nosotros</a>
+            <a href="/pages/privacidad.html">Política de Privacidad</a>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center mb-3">
+          <h5 class="text-uppercase mb-3 text-warning">Síguenos</h5>
+          <div class="social-icons">
+            <a href="https://facebook.com/tunumeroloteriard" target="_blank" class="text-white mx-2 fs-4 hover-gold"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/tunumeroloteriard" target="_blank" class="text-white mx-2 fs-4 hover-gold"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/tunumeroloteriard" target="_blank" class="text-white mx-2 fs-4 hover-gold"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-12 text-center mt-4">
+          <hr class="mb-3" style="border-color: #444;" />
+          <p class="mb-0 small">© 2025 TuNumeroLoteriaRD. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+  <!-- Tu lógica -->
+  <script src="app.js"></script>
 </body>
 </html>
