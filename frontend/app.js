@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // ===============================
 // CARGAR RESULTADOS DESDE API
 // ===============================
@@ -15,7 +15,7 @@
 // ===============================
 // LÓGICA DE MODO OSCURO
 // ===============================
-const toggleButton = document.getElementById('toggleDarkMode');
+const toggleButton = document.getElementById('toggleDarkMode'); // Ensure this is the only declaration
 
 if (toggleButton) {
     // Verificar modo guardado
@@ -53,7 +53,7 @@ if (toggleButton) {
   console.warn("No se encontró el botón toggle");
 }
 
-=======
+
 
 
 
@@ -68,7 +68,7 @@ fetch('/api/loteria')
 
 
 // Selecciona el botón de alternar modo oscuro
-const toggleButton = document.getElementById('toggle-dark-mode');
+// Removed duplicate declaration of toggleButton
 
 // Verifica si el usuario ya tiene una preferencia guardada
 if (localStorage.getItem('dark-mode') === 'enabled') {
@@ -92,4 +92,3 @@ toggleButton.addEventListener('click', () => {
         localStorage.setItem('dark-mode', 'disabled');
     }
 });
->>>>>>> b50d5c47afec51bef442eb14bfd865a0f8a0093c
