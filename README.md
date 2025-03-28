@@ -1,13 +1,39 @@
-# TuNumeroLoteriaRD
-TuNumeroLoteriaRD es un proyecto que muestra en tiempo real los números de las diferentes loterías de la República Dominicana.
+# 🎰 TuNumeroLoteriaRD
 
-📌 Características:
-✅ Consulta los resultados de las principales loterías del país.
-✅ Interfaz sencilla y fácil de usar.
-✅ Datos actualizados para brindar información precisa.
+> Una plataforma ligera y rápida para consultar los resultados de las principales loterías de República Dominicana. ¡Claridad, simplicidad y accesibilidad desde cualquier dispositivo!
 
-🚀 Tecnologías utilizadas:
-Frontend: HTML, CSS, JavaScript
-Backend: (Si tienes un backend, menciona si usas Node.js, Firebase, etc.)
-🎯 Objetivo:
-Facilitar el acceso rápido a los resultados de loterías dominicanas en una sola plataforma.
+---
+
+## 📌 Funcionalidades
+
+- 🔄 **Resultados de Loterías**: Muestra tarjetas para:
+  - Lotería Nacional
+  - Leidsa
+  - Loteka
+  - Lotería Real
+  - La Suerte
+- 🌙 **Modo Oscuro/Claro**: Alternancia con almacenamiento en `localStorage`.
+- 🗓️ **Fecha Dinámica**: Se actualiza automáticamente al día actual.
+- 🔗 **Enlaces rápidos** a páginas de Contacto, Nosotros y Política de Privacidad.
+- 📱 **Diseño Responsivo**: Adaptado para móviles, tabletas y escritorio.
+- 📦 **Frontend puro**: HTML, CSS y JavaScript vanilla. Sin frameworks pesados.
+
+---
+
+## 🚀 Cómo Ejecutarlo Localmente
+
+1. Clona el proyecto:
+   ```bash
+   git clone https://github.com/tuusuario/TuNumeroLoteriaRD.git
+   cd TuNumeroLoteriaRD
+
+    Próximas Mejores
+ Integración con una API para resultados reales.
+
+ Filtro de estadísticas por fechas.
+
+ Base de datos de números ganadores.
+
+ Comparador de números favoritos.
+
+
