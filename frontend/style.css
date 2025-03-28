@@ -1,0 +1,72 @@
+/* Estilos generales para el navbar */
+.navbar {
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la marca/logo */
+.navbar-brand.brand-custom {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50 !important;
+    margin-right: 20px;
+}
+
+/* Estilos para los enlaces del navbar */
+.nav-link-custom {
+    font-size: 16px;
+    padding: 8px 15px !important;
+    color: #2c3e50 !important;
+}
+
+.nav-link-custom:hover {
+    color: #ffd700 !important;  /* Efecto hover dorado */
+}
+
+/* Ajustes para el modo móvil */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 10px;  /* Reducir el margen superior en móvil */
+    }
+
+    .nav-item {
+        margin-bottom: 5px;  /* Reducir el espacio entre ítems en móvil */
+    }
+
+    .dropdown-menu {
+        border: none;  /* Quitar bordes en móvil */
+        box-shadow: none;
+    }
+}
+
+/* Ajustes para el modo oscuro */
+.dark-mode .navbar {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .navbar-brand.brand-custom {
+    color: #ffffff !important;
+}
+
+.dark-mode .nav-link-custom {
+    color: #ffffff !important;
+}
+
+.dark-mode .nav-link-custom:hover {
+    color: #ffd700 !important;
+}
+
+.dark-mode .dropdown-menu {
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+.dark-mode .dropdown-item {
+    color: #ffffff !important;
+}
+
+.dark-mode .dropdown-item:hover {
+    background-color: #444;
+    color: #ffd700 !important;
+}
