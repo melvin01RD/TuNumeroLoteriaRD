@@ -16,9 +16,6 @@
 - 🗓️ **Fecha Dinámica**: Se actualiza automáticamente al día actual.
 - 🔗 **Enlaces rápidos** a páginas de Contacto, Nosotros y Política de Privacidad.
 - 📱 **Diseño Responsivo**: Adaptado para móviles, tabletas y escritorio.
-- 📦 **Frontend puro**: HTML, CSS y JavaScript vanilla. Sin frameworks pesados.
-
----
 
 ## 🚀 Cómo Ejecutarlo Localmente
 
