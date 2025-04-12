@@ -1,11 +1,25 @@
 {
   "name": "tunumeroloteriard",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Servidor de resultados de lotería",
+  "main": "src/server.js",
+  "type": "module",
   "scripts": {
+    "start": "concurrently \"python backend/src/app.py\" \"node backend/src/server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Melvin De La Cruz",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "axios": "^1.8.4",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "git": "^0.1.5",
+    "jsdom": "^26.0.0",
+    "puppeteer": "^24.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
 }

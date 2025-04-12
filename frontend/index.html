@@ -18,15 +18,10 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-
-
-    <a href="/frontend/index.html" class="navbar-brand brand-custom">TuNumeroLoteriaRD</a>
-
-
+      <a href="/frontend/index.html" class="navbar-brand brand-custom">TuNumeroLoteriaRD</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
@@ -37,24 +32,6 @@
               <li><a class="dropdown-item" href="../loteka.html">Loteka</a></li>
               <li><a class="dropdown-item" href="../real.html">Lotería Real</a></li>
               <li><a class="dropdown-item" href="../suerte.html">La Suerte</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Estadísticas</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../nacional.html">Lotería Nacional</a></li>
-              <li><a class="dropdown-item" href="../leidsa.html">Leidsa</a></li>
-              <li><a class="dropdown-item" href="../loteka.html">Loteka</a></li>
-              <li><a class="dropdown-item" href="../real.html">Lotería Real</a></li>
-              <li><a class="dropdown-item" href="../suerte.html">La Suerte</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Redes</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="https://facebook.com/tunumeroloteriard" target="_blank">Facebook</a></li>
-              <li><a class="dropdown-item" href="https://instagram.com/tunumeroloteriard" target="_blank">Instagram</a></li>
-              <li><a class="dropdown-item" href="https://twitter.com/tunumeroloteriard" target="_blank">Twitter</a></li>
             </ul>
           </li>
           <!-- Toggle Dark Mode -->
@@ -78,15 +55,14 @@
             <h5 class="card-title mb-0">Lotería Nacional</h5>
           </div>
           <div class="card-body">
-            <p><strong>Fecha:</strong> <span class="fecha-loteria"></span></p>
-
+            <p><strong>Fecha:</strong> <span class="fecha-loteria" id="fecha-nacional"></span></p>
             <p><strong>Números Ganadores:</strong></p>
-            <ul class="list-unstyled">
-              <li>Primer Premio:</li>
-              <li>Segundo Premio:</li>
-              <li>Tercer Premio:</li>
+            <ul class="list-unstyled" id="resultados-nacional">
+              <li>Primer Premio: <span id="primer-nacional"></span></li>
+              <li>Segundo Premio: <span id="segundo-nacional"></span></li>
+              <li>Tercer Premio: <span id="tercer-nacional"></span></li>
             </ul>
-            <a href="/nacional" class="btn btn-primary">Ver más</a>
+            <a href="http://localhost:3000/nacional" class="btn btn-primary">Ver más</a>
           </div>
         </div>
       </div>
@@ -98,14 +74,14 @@
             <h5 class="card-title mb-0">Leidsa</h5>
           </div>
           <div class="card-body">
-            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Fecha:</strong> <span class="fecha-loteria" id="fecha-leidsa"></span></p>
             <p><strong>Números Ganadores:</strong></p>
-            <ul class="list-unstyled">
-              <li>Primer Premio:</li>
-              <li>Segundo Premio:</li>
-              <li>Tercer Premio:</li>
+            <ul class="list-unstyled" id="resultados-leidsa">
+              <li>Primer Premio: <span id="primer-leidsa"></span></li>
+              <li>Segundo Premio: <span id="segundo-leidsa"></span></li>
+              <li>Tercer Premio: <span id="tercer-leidsa"></span></li>
             </ul>
-            <a href="/leidsa" class="btn btn-success">Ver más</a>
+            <a href="http://localhost:3000/leidsa" class="btn btn-success">Ver más</a>
           </div>
         </div>
       </div>
@@ -113,19 +89,18 @@
       <!-- Card 3: Loteka -->
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
-          <div class="card-header bg-danger text-white">
+          <div class="card-header bg-warning text-white">
             <h5 class="card-title mb-0">Loteka</h5>
           </div>
           <div class="card-body">
-            <p><strong>Fecha:</strong> <span class="fecha-loteria"></span></p>
-
+            <p><strong>Fecha:</strong> <span class="fecha-loteria" id="fecha-loteka"></span></p>
             <p><strong>Números Ganadores:</strong></p>
-            <ul class="list-unstyled">
-              <li>Primer Premio:</li>
-              <li>Segundo Premio:</li>
-              <li>Tercer Premio:</li>
+            <ul class="list-unstyled" id="resultados-loteka">
+              <li>Primer Premio: <span id="primer-loteka"></span></li>
+              <li>Segundo Premio: <span id="segundo-loteka"></span></li>
+              <li>Tercer Premio: <span id="tercer-loteka"></span></li>
             </ul>
-            <a href="/loteka" class="btn btn-danger">Ver más</a>
+            <a href="http://localhost:3000/loteria-loteka" class="btn btn-warning">Ver más</a>
           </div>
         </div>
       </div>
@@ -133,19 +108,18 @@
       <!-- Card 4: Lotería Real -->
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
-          <div class="card-header bg-warning text-white">
+          <div class="card-header bg-danger text-white">
             <h5 class="card-title mb-0">Lotería Real</h5>
           </div>
           <div class="card-body">
-            <p><strong>Fecha:</strong> <span class="fecha-loteria"></span></p>
-
+            <p><strong>Fecha:</strong> <span class="fecha-loteria" id="fecha-real"></span></p>
             <p><strong>Números Ganadores:</strong></p>
-            <ul class="list-unstyled">
-              <li>Primer Premio:</li>
-              <li>Segundo Premio:</li>
-              <li>Tercer Premio:</li>
+            <ul class="list-unstyled" id="resultados-real">
+              <li>Primer Premio: <span id="primer-real"></span></li>
+              <li>Segundo Premio: <span id="segundo-real"></span></li>
+              <li>Tercer Premio: <span id="tercer-real"></span></li>
             </ul>
-            <a href="/real" class="btn btn-warning">Ver más</a>
+            <a href="http://localhost:3000/real" class="btn btn-danger">Ver más</a>
           </div>
         </div>
       </div>
@@ -153,18 +127,35 @@
       <!-- Card 5: La Suerte -->
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm">
-          <div class="card-header bg-info text-white">
+          <div class="card-header bg-dark text-white">
             <h5 class="card-title mb-0">La Suerte</h5>
           </div>
           <div class="card-body">
-            <p><strong>Fecha:</strong> 25/10/2023</p>
+            <p><strong>Fecha:</strong> <span class="fecha-loteria" id="fecha-suerte"></span></p>
             <p><strong>Números Ganadores:</strong></p>
-            <ul class="list-unstyled">
-              <li>Primer Premio:</li>
-              <li>Segundo Premio:</li>
-              <li>Tercer Premio:</li>
+            <ul class="list-unstyled" id="resultados-suerte">
+              <li>Primer Premio: <span id="primer-suerte"></span></li>
+              <li>Segundo Premio: <span id="segundo-suerte"></span></li>
+              <li>Tercer Premio: <span id="tercer-suerte"></span></li>
             </ul>
-            <a href="/suerte" class="btn btn-info">Ver más</a>
+            <a href="http://localhost:3000/suerte" class="btn btn-dark">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-info text-white">
+            <h5 class="card-title mb-0">Lotería Primera</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Fecha:</strong> <span class="fecha-loteria" id="fecha-primera"></span></p>
+            <p><strong>Números Ganadores:</strong></p>
+            <ul class="list-unstyled" id="resultados-primera">
+              <li>Primer Premio: <span id="primer-primera"></span></li>
+              <li>Segundo Premio: <span id="segundo-primera"></span></li>
+              <li>Tercer Premio: <span id="tercer-primera"></span></li>
+            </ul>
+            <a href="http://localhost:3000/primera" class="btn btn-info text-white">Ver más</a>
           </div>
         </div>
       </div>
@@ -173,8 +164,8 @@
 
   <footer class="bg-black text-white pt-4 pb-2">
     <div class="container">
+      <!-- Enlaces -->
       <div class="row">
-        <!-- Enlaces -->
         <div class="col-md-4 text-center text-md-start mb-3">
           <h5 class="text-uppercase mb-3 text-warning">Enlaces rápidos</h5>
           <ul class="list-unstyled">
@@ -183,26 +174,9 @@
             <li><a href="pages/privacidad.html" class="text-white text-decoration-none hover-gold">Política de Privacidad</a></li>
           </ul>
         </div>
-  
-        <!-- Redes Sociales -->
-        <div class="col-md-4 text-center mb-3">
-          <h5 class="text-uppercase mb-3 text-warning">Síguenos</h5>
-          <div class="social-icons">
-            <a href="https://facebook.com/tunumeroloteriard" target="_blank" class="text-white mx-2 fs-4 hover-gold"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/tunumeroloteriard" target="_blank" class="text-white mx-2 fs-4 hover-gold"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com/tunumeroloteriard" target="_blank" class="text-white mx-2 fs-4 hover-gold"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-  
-        <!-- Derechos -->
-        <div class="col-12 text-center mt-4">
-          <hr class="mb-3" style="border-color: #444;" />
-          <p class="mb-0 small">© 2025 TuNumeroLoteriaRD. Todos los derechos reservados.</p>
-        </div>
       </div>
     </div>
   </footer>
-  
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
@@ -210,5 +184,47 @@
 
   <!-- Tu lógica -->
   <script src="app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Función para obtener los resultados desde el backend
+        const obtenerResultados = async (ruta, loteria) => {
+            try {
+                const response = await fetch(`http://localhost:3000${ruta}`);
+                const data = await response.json();
+                mostrarResultados(data, loteria);
+            } catch (error) {
+                console.error('Error al obtener los datos:', error);
+            }
+        };
+
+        // Función para mostrar los resultados en las tarjetas
+        const mostrarResultados = (data, loteria) => {
+            const fechaElemento = document.getElementById(`fecha-${loteria}`);
+            const resultadosElemento = document.getElementById(`resultados-${loteria}`);
+            if (data && data.resultados && data.resultados.length > 0) {
+                // Asegurarse de que los datos existen antes de intentar mostrar
+                const { fecha, resultados } = data;
+                fechaElemento.textContent = fecha;
+
+                // Mostrar números ganadores
+                resultados.forEach((item, index) => {
+                    const premioElemento = document.getElementById(`primer-${loteria}`);
+                    if (index === 0) premioElemento.textContent = item; // Primer premio
+                    else if (index === 1) document.getElementById(`segundo-${loteria}`).textContent = item; // Segundo premio
+                    else if (index === 2) document.getElementById(`tercer-${loteria}`).textContent = item; // Tercer premio
+                });
+            }
+        };
+
+        // Obtener los resultados de cada lotería
+        obtenerResultados('/nacional', 'nacional');
+        obtenerResultados('/leidsa', 'leidsa');
+        obtenerResultados('/loteka', 'loteka');
+        obtenerResultados('/real', 'real');
+        obtenerResultados('/suerte', 'suerte');
+        obtenerResultados('/primera', 'primera');
+    });
+  </script>
 </body>
 </html>

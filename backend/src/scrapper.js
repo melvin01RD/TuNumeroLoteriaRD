@@ -1,63 +1,100 @@
-import { get } from 'axios';
+import axios from 'axios';
 import { load } from 'cheerio';
 
-// Función para extraer datos de Leidsa
+// Scraper para Leidsa
 const scrapeLeidsa = async () => {
     try {
         const url = 'https://www.leidsa.com/';
-        const { data } = await get(url);
+        const { data } = await axios.get(url);
         const $ = load(data);
 
         const resultados = [];
-        $('.clase-de-los-numeros').each((i, elem) => { // Reemplaza con la clase correcta
-            resultados.push($(elem).text());
+        $('.numerosSorteo div.numero').each((i, elem) => {
+            resultados.push($(elem).text().trim());
         });
 
-        return resultados;
+        return {
+            fuente: 'Leidsa',
+            fecha: new Date().toLocaleDateString(),
+            numeros: resultados
+        };
     } catch (error) {
         throw new Error('Error al obtener los datos de Leidsa');
     }
 };
 
-// Función para extraer datos de Lotería Nacional
+// Scraper para Lotería Nacional
 const scrapeLoteríaNacional = async () => {
     try {
         const url = 'https://loterialn.gob.do/';
-        const { data } = await get(url);
+        const { data } = await axios.get(url);
         const $ = load(data);
 
         const resultados = [];
-        $('.clase-de-los-numeros').each((i, elem) => { // Reemplaza con la clase correcta
-            resultados.push($(elem).text());
+        $('.resultado-loteria .numero').each((i, elem) => {
+            resultados.push($(elem).text().trim());
         });
 
-        return resultados;
+        return {
+            fuente: 'Lotería Nacional',
+            fecha: new Date().toLocaleDateString(),
+            numeros: resultados
+        };
     } catch (error) {
         throw new Error('Error al obtener los datos de Lotería Nacional');
     }
 };
 
-// Función para extraer datos de Loteka
+// Scraper para Loteka
 const scrapeLoteka = async () => {
     try {
         const url = 'https://www.loteka.com/';
-        const { data } = await get(url);
+        const { data } = await axios.get(url);
         const $ = load(data);
 
         const resultados = [];
-        $('.clase-de-los-numeros').each((i, elem) => { // Reemplaza con la clase correcta
-            resultados.push($(elem).text());
+        $('.last-draw .numbers li').each((i, elem) => {
+            resultados.push($(elem).text().trim());
         });
 
-        return resultados;
+        return {
+            fuente: 'Loteka',
+            fecha: new Date().toLocaleDateString(),
+            numeros: resultados
+        };
     } catch (error) {
         throw new Error('Error al obtener los datos de Loteka');
     }
 };
 
-// Exportar las funciones
-export default {
+// 🔹 Scraper para La Suerte Dominicana
+const scrapeLaSuerte = async () => {
+    try {
+        const url = 'https://lasuertedominicana.do';
+        const { data } = await axios.get(url);
+        const $ = load(data);
+
+        const resultados = [];
+        // Selector tentativo - AJUSTAR con el HTML real del sitio
+        $('.lottery-results .number').each((i, elem) => {
+            resultados.push($(elem).text().trim());
+        });
+
+        return {
+            fuente: 'La Suerte Dominicana',
+            fecha: new Date().toLocaleDateString(),
+            numeros: resultados
+        };
+    } catch (error) {
+        throw new Error('Error al obtener los datos de La Suerte Dominicana');
+    }
+};
+
+// Exportar todas las funciones
+export {
     scrapeLeidsa,
     scrapeLoteríaNacional,
     scrapeLoteka,
+    scrapeLaSuerte
 };
+
